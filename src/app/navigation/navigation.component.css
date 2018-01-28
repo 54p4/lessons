@@ -1,0 +1,8 @@
+.navix a {
+    width: 16%;
+    max-width: 16%;
+    height: 5%;
+    max-height: 5%;
+    overflow: hidden;
+    white-space:nowrap;
+}
