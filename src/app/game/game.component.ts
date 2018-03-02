@@ -28,12 +28,12 @@ export class GameComponent implements OnInit, OnDestroy {
     if (!this.running) {
       return;
     }
-
-
+    const canvas = this.gmCnv.nativeElement;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight - 70;
     const context: CanvasRenderingContext2D =
-      this.gmCnv.nativeElement.getContext('2d');
+      canvas.getContext('2d');
 
-    context.clearRect(0, 0, 1200, 600);
     context.font = '48px serif';
     if (this.indx >= this.hanzi.length) {
       this.indx = 0;
